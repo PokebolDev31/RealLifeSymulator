@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Life Symulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</body>
+<heder>
+    <h1>Zombie Apocalypse Survival<h1>
+</heder>
+<nav>
+    <a herf="#" onclick="showSection('Informacje')">Informacje</a>
+    <a href="#" onclick="showSection('Aktualnosci')">Aktualnosci</a>
+    <a herf="#" onclick="showSection('Kontakt')">Kontakt</a>
+</nav>
+
+<section id="Informacje">
+    <h2>Informacje</h2>
+    <p>Gra jest tworzona na silniku Unity 3D stoworzona przez jednego developera</p>
+    <p></p>
+</section>
+<footer>
+    &copy; Dev Pokebol 2024 
+</footer>
+
+<section id="Aktualnosci" class="hidden">
+    <h2>Aktualnosci</h2>
+    <p>Tutaj znajdziesz informacje dotyczące tego co pojawi się w grze</p>
+</section>
+
+<section id="Kontakt" class="hidden">
+    <h4>Kontakt</h4>
+    <p>Masz jakiś pomysł jaki bym mogł dodać do gry?</p>
+    <p>A może zauważyłeś błąd?</p>
+    <p>Napisz do mnie na mail</p>
+    <p>Mail: <a href="mailto:devpokebol@gmail.com">devpokebol@gmail.com</a></p>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+    }
+</script>
+</body>
+</html>
